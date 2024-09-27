@@ -1,3 +1,4 @@
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=16201242)
 # Lecture de données
 
 En informatique, les données sont stockées de façon indépendante du programme qui les utilise. Il est donc nécessaire d’accéder à celles ci (depuis le programme) avec une fonction dédiée qui peut se décomposer en trois étapes:
