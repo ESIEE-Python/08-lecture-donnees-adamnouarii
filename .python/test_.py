@@ -8,6 +8,9 @@ FILENAME = "listes.csv"
 
 @pytest.fixture(scope="module")
 def setup():
+    """
+    fonction de test
+    """
     try:
         data = read_data(FILENAME)
     except:
@@ -125,11 +128,17 @@ for k in indices:
     input_output.append((k, listes[k]))
 @pytest.mark.parametrize("input,expected", input_output)
 def test_read_data(input, expected):
+    """
+    fonction de test
+    """
     assert read_data(FILENAME)[input] == expected, input
 
 
 @pytest.mark.parametrize("input,expected", input_output)
 def test_get_list_k(setup, input, expected):
+    """
+    fonction de test
+    """
     data = setup
     assert get_list_k(data, input) == expected, input
 
@@ -139,6 +148,9 @@ input_output = [ (0, 90), (1, 82), (2, 56), (16, 74), (17, 52), (30, 36), (31, 4
 
 @pytest.mark.parametrize("input,expected", input_output)
 def test_get_first(setup, input, expected):
+    """
+    fonction de test
+    """
     data = setup
     assert get_first(data[input]) == expected, input
 
@@ -148,6 +160,9 @@ input_output = [ (0, 35), (1, 66), (2, 39), (16, 47), (17, 73), (30, 40), (31, 8
 
 @pytest.mark.parametrize("input,expected", input_output)
 def test_get_last(setup, input, expected):
+    """
+    fonction de test
+    """
     data = setup
     assert get_last(data[input]) == expected, expected
 
@@ -157,6 +172,9 @@ input_output = [ (0, 90), (1, 91), (2, 92), (16, 81), (17, 85), (30, 99), (31, 9
 
 @pytest.mark.parametrize("input,expected", input_output)
 def test_get_max(setup, input, expected):
+    """
+    fonction de test
+    """
     data = setup
     assert get_max(data[input]) == expected, expected
 
@@ -166,6 +184,9 @@ input_output = [ (0, 35), (1, 34), (2, 35), (16, 37), (17, 40), (30, 35), (31, 3
 
 @pytest.mark.parametrize("input,expected", input_output)
 def test_get_min(setup, input, expected):
+    """
+    fonction de test
+    """
     data = setup
     assert get_min(data[input]) == expected, expected
 
@@ -175,6 +196,9 @@ input_output = [ (0, 582), (1, 584), (2, 504), (16, 599), (17, 612), (30, 627), 
 
 @pytest.mark.parametrize("input,expected", input_output)
 def test_get_sum(setup, input, expected):
+    """
+    fonction de test
+    """
     data = setup
     assert get_sum(data[input]) == expected, expected
 
